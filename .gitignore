@@ -1,0 +1,10 @@
+# System files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Claude internal config
+.claude/
+
+# Internal reference doc — not for the live site
+HOW_IT_WORKS.html

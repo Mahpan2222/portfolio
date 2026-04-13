@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mahdi Panahi — Computer Engineering Student, Researcher, and Embedded Systems Developer based in Helsingborg, Sweden." />
+  <title>Mahdi Panahi</title>
+
+  <!-- Google Fonts: Georgia is system font; Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons (email, github, download, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       NAVBAR
+       Visible only when at top of page.
+       JS hides it on scroll down, shows on scroll to top.
+  ============================================= -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">MP</a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark mode toggle button -->
+      <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- =============================================
+       HERO SECTION
+       Two versions are layered here via CSS classes.
+       JS or CSS will show one at a time (user picks style later).
+       Currently showing: Version D — typing effect.
+       To switch to Version A (minimal): change body class.
+  ============================================= -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Helsingborg, Sweden</p>
+      <h1 class="hero-name">Mahdi Panahi</h1>
+      <p class="hero-static-title">Computer Engineering Student</p>
+
+      <!-- Typing animation line — cycles through roles -->
+      <p class="hero-typing-line">
+        <span id="typed-text"></span><span class="cursor" aria-hidden="true">|</span>
+      </p>
+
+      <div class="hero-buttons">
+        <a href="mailto:swemahdi@gmail.com" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://github.com/Mahpan2222" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll hint at bottom of hero -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       ABOUT SECTION
+  ============================================= -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="section-divider"></div>
+
+      <div class="about-body">
+        <p>
+          I'm a Computer Engineering student at Halmstad University, Sweden, with a focus on
+          embedded systems, real-time communication, and applied security research.
+          I enjoy working at the intersection of hardware and software — from low-level
+          firmware to machine learning pipelines.
+        </p>
+        <p>
+          Currently completing my degree thesis at <strong>Autoliv</strong>, where I'm building
+          a real-time posture estimation system for motorcycle riders using multi-IMU sensor fusion.
+        </p>
+
+        <ul class="about-details">
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            B.Sc. Computer Engineering — Halmstad University <span class="date-label">(2023–present)</span>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            Helsingborg, Sweden
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:swemahdi@gmail.com">swemahdi@gmail.com</a>
+          </li>
+          <li>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/Mahpan2222" target="_blank" rel="noopener noreferrer">github.com/Mahpan2222</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       RESEARCH SECTION
+  ============================================= -->
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <div class="section-divider"></div>
+
+      <!-- Publication Card -->
+      <article class="research-card fade-in-up">
+        <div class="research-meta">
+          <span class="badge badge--review">Under Review</span>
+          <span class="research-venue">IEEE ETFA 2026 · Västerås, Sweden</span>
+        </div>
+        <h3 class="research-title">
+          A Micro-benchmark of ECDSA Curves and Ed25519 for Low-Latency V2X Message Authentication
+        </h3>
+        <p class="research-authors">
+          Mahdi Panahi et al. ·
+          Halmstad University &amp; Federal University of Rio Grande do Sul, Brazil
+        </p>
+        <p class="research-description">
+          Benchmarking cryptographic signing algorithms for Vehicle-to-Everything (V2X) communication,
+          evaluating performance trade-offs relevant to low-latency automotive security protocols.
+        </p>
+        <a href="https://github.com/Mahpan2222" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          View source code <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+
+      <!-- Thesis Card -->
+      <article class="research-card fade-in-up">
+        <div class="research-meta">
+          <span class="badge badge--ongoing">Ongoing</span>
+          <span class="research-venue">Autoliv, Sweden · Degree Thesis (Paid)</span>
+        </div>
+        <h3 class="research-title">
+          Posture Estimation for Motorcycle Riders Using Multi-IMU Systems
+        </h3>
+        <p class="research-authors">
+          Mahdi Panahi · Halmstad University / Autoliv
+        </p>
+        <p class="research-description">
+          Developing a real-time posture estimation pipeline using multiple IMU sensors mounted
+          on a motorcycle rider. The system combines ESP32 microcontrollers running microROS,
+          MediaPipe for ground-truth pose validation, and sensor fusion via Extended Kalman Filter,
+          Madgwick, and Mahony algorithms.
+        </p>
+        <div class="tech-tags">
+          <span class="tag">ESP32</span>
+          <span class="tag">microROS</span>
+          <span class="tag">MediaPipe</span>
+          <span class="tag">Extended Kalman Filter</span>
+          <span class="tag">Madgwick</span>
+          <span class="tag">Mahony</span>
+          <span class="tag">C / Python</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PROJECTS SECTION
+       Two placeholder cards ready to be filled in.
+       Each card has all the fields you'll need.
+  ============================================= -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider"></div>
+      <p class="section-note">University projects — details coming soon.</p>
+
+      <div class="projects-grid">
+
+        <!-- ── PROJECT PLACEHOLDER 1 ── -->
+        <article class="project-card project-card--placeholder fade-in-up">
+          <div class="project-card-top">
+            <i class="fas fa-microchip project-icon"></i>
+            <!-- FILL IN: Replace with actual project title -->
+            <h3 class="project-title">Project Title</h3>
+          </div>
+          <!-- FILL IN: Replace with a 2–3 sentence description -->
+          <p class="project-description">
+            A short description of what this project does, what problem it solves,
+            and what you learned from it.
+          </p>
+          <!-- FILL IN: Replace tags with actual technologies used -->
+          <div class="tech-tags">
+            <span class="tag">Technology</span>
+            <span class="tag">Stack</span>
+            <span class="tag">Here</span>
+          </div>
+          <!-- FILL IN: Replace # with actual project link (GitHub or demo) -->
+          <a href="#" class="link-arrow link-arrow--disabled" aria-disabled="true">
+            Link coming soon <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- ── PROJECT PLACEHOLDER 2 ── -->
+        <article class="project-card project-card--placeholder fade-in-up">
+          <div class="project-card-top">
+            <i class="fas fa-code project-icon"></i>
+            <!-- FILL IN: Replace with actual project title -->
+            <h3 class="project-title">Project Title</h3>
+          </div>
+          <!-- FILL IN: Replace with a 2–3 sentence description -->
+          <p class="project-description">
+            A short description of what this project does, what problem it solves,
+            and what you learned from it.
+          </p>
+          <!-- FILL IN: Replace tags with actual technologies used -->
+          <div class="tech-tags">
+            <span class="tag">Technology</span>
+            <span class="tag">Stack</span>
+            <span class="tag">Here</span>
+          </div>
+          <!-- FILL IN: Replace # with actual project link (GitHub or demo) -->
+          <a href="#" class="link-arrow link-arrow--disabled" aria-disabled="true">
+            Link coming soon <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CV DOWNLOAD SECTION
+  ============================================= -->
+  <section id="cv">
+    <div class="container">
+      <h2 class="section-title">Curriculum Vitae</h2>
+      <div class="section-divider"></div>
+      <p>Download my CV — available in English and Swedish:</p>
+
+      <div class="cv-buttons">
+        <a href="assets/cv-english.docx" download="Mahdi_Panahi_CV_EN.docx" class="btn btn-primary">
+          <i class="fas fa-download"></i> CV — English
+        </a>
+        <a href="assets/cv-swedish.docx" download="Mahdi_Panahi_CV_SV.docx" class="btn btn-outline">
+          <i class="fas fa-download"></i> CV — Svenska
+        </a>
+      </div>
+
+      <p class="cv-note">
+        Currently in Word format (.docx). Replace with PDF versions when ready by dropping
+        <code>cv-english.pdf</code> and <code>cv-swedish.pdf</code> into the <code>assets/</code> folder
+        and updating the links above.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CONTACT SECTION
+  ============================================= -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="section-divider"></div>
+      <p>Feel free to reach out — I'm always open to research collaborations, internships, or just a conversation.</p>
+
+      <div class="contact-links">
+        <a href="mailto:swemahdi@gmail.com" class="contact-item">
+          <i class="fas fa-envelope contact-icon"></i>
+          <div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">swemahdi@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://github.com/Mahpan2222" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <i class="fab fa-github contact-icon"></i>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/Mahpan2222</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer id="footer">
+    <div class="container">
+      <p>© 2026 Mahdi Panahi &mdash; Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
