@@ -31,6 +31,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -194,57 +195,113 @@
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="section-divider"></div>
-      <p class="section-note">University projects — details coming soon.</p>
+
 
       <div class="projects-grid">
 
-        <!-- ── PROJECT PLACEHOLDER 1 ── -->
+        <!-- ── PROJECT 1: Smart Campus Drone ── -->
+        <article class="project-card fade-in-up">
+          <div class="project-card-top">
+            <i class="fas fa-satellite project-icon"></i>
+            <h3 class="project-title">Smart Campus Drone Control System</h3>
+          </div>
+          <p class="project-description">
+            Designed and built the full-stack web application for an autonomous drone fleet
+            (10 × Crazyflie 2.1+) operating over a miniature smart campus model at Halmstad University.
+            Developed a PHP/JS control dashboard, a back-end server handling real-time command routing
+            to the drones, and a relational database layer for storing and replaying telemetry and
+            mission data — enabling services like package delivery, security patrol, and emergency response.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Crazyflie API</span>
+            <span class="tag">Python</span>
+          </div>
+          <a href="https://github.com/Mahpan2222" target="_blank" rel="noopener noreferrer" class="link-arrow">
+            View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- ── PROJECT 2: Web Report System ── -->
         <article class="project-card project-card--placeholder fade-in-up">
           <div class="project-card-top">
-            <i class="fas fa-microchip project-icon"></i>
-            <!-- FILL IN: Replace with actual project title -->
-            <h3 class="project-title">Project Title</h3>
+            <i class="fas fa-globe project-icon"></i>
+            <h3 class="project-title">Full-Stack Web Report System</h3>
           </div>
-          <!-- FILL IN: Replace with a 2–3 sentence description -->
           <p class="project-description">
-            A short description of what this project does, what problem it solves,
-            and what you learned from it.
+            University course project — a complete web-based report system with both
+            front-end and back-end. Details and link coming soon.
           </p>
-          <!-- FILL IN: Replace tags with actual technologies used -->
           <div class="tech-tags">
-            <span class="tag">Technology</span>
-            <span class="tag">Stack</span>
-            <span class="tag">Here</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Full-Stack</span>
           </div>
-          <!-- FILL IN: Replace # with actual project link (GitHub or demo) -->
           <a href="#" class="link-arrow link-arrow--disabled" aria-disabled="true">
             Link coming soon <i class="fas fa-arrow-right"></i>
           </a>
         </article>
 
-        <!-- ── PROJECT PLACEHOLDER 2 ── -->
-        <article class="project-card project-card--placeholder fade-in-up">
-          <div class="project-card-top">
-            <i class="fas fa-code project-icon"></i>
-            <!-- FILL IN: Replace with actual project title -->
-            <h3 class="project-title">Project Title</h3>
-          </div>
-          <!-- FILL IN: Replace with a 2–3 sentence description -->
-          <p class="project-description">
-            A short description of what this project does, what problem it solves,
-            and what you learned from it.
-          </p>
-          <!-- FILL IN: Replace tags with actual technologies used -->
-          <div class="tech-tags">
-            <span class="tag">Technology</span>
-            <span class="tag">Stack</span>
-            <span class="tag">Here</span>
-          </div>
-          <!-- FILL IN: Replace # with actual project link (GitHub or demo) -->
-          <a href="#" class="link-arrow link-arrow--disabled" aria-disabled="true">
-            Link coming soon <i class="fas fa-arrow-right"></i>
-          </a>
-        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SKILLS SECTION
+  ============================================= -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="section-divider"></div>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i class="fas fa-microchip"></i> Embedded &amp; Hardware</h3>
+          <ul class="skill-list">
+            <li>ESP32 / Arduino</li>
+            <li>microROS / ROS 2</li>
+            <li>IMU Sensor Fusion</li>
+            <li>Crazyflie 2.1+ Drones</li>
+            <li>C / C++ (Firmware)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i class="fas fa-code"></i> Software &amp; Web</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>PHP</li>
+            <li>JavaScript / HTML / CSS</li>
+            <li>MySQL / SQLite</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i class="fas fa-brain"></i> AI &amp; Algorithms</h3>
+          <ul class="skill-list">
+            <li>MediaPipe (Pose Estimation)</li>
+            <li>YOLO (Object Detection)</li>
+            <li>Extended Kalman Filter</li>
+            <li>Madgwick / Mahony Filters</li>
+            <li>Signal Processing</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i class="fas fa-shield-alt"></i> Security &amp; Protocols</h3>
+          <ul class="skill-list">
+            <li>ECDSA / Ed25519 Cryptography</li>
+            <li>V2X Communication</li>
+            <li>MQTT</li>
+            <li>Real-time Systems</li>
+            <li>Linux / Git</li>
+          </ul>
+        </div>
 
       </div>
     </div>
