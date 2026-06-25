@@ -243,3 +243,38 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+
+/* ==============================================
+   FEATURE 6: SCREENSHOT CAROUSELS (project cards)
+   ─────────────────────────────────────────────
+   How it works:
+   - Any .project-screenshots div with more than one .screenshot-slide
+     gets prev/next buttons and dot indicators wired up.
+   - Clicking prev/next or a dot calls goTo(index), which:
+       → translates the .screenshots-track by -100% × index
+       → updates .dot--active on the correct dot
+   - Cards with only one image are skipped (no controls shown).
+============================================== */
+
+document.querySelectorAll('.project-screenshots').forEach((gallery) => {
+  const track  = gallery.querySelector('.screenshots-track');
+  const slides = gallery.querySelectorAll('.screenshot-slide');
+  const dots   = gallery.querySelectorAll('.dot');
+  const prevBtn = gallery.querySelector('.screenshot-prev');
+  const nextBtn = gallery.querySelector('.screenshot-next');
+
+  if (!track || slides.length <= 1) return; // single-image card — nothing to do
+
+  let current = 0;
+
+  function goTo(index) {
+    current = ((index % slides.length) + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('dot--active', i === current));
+  }
+
+  prevBtn?.addEventListener('click', () => goTo(current - 1));
+  nextBtn?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+});
