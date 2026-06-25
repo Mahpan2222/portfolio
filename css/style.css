@@ -717,6 +717,13 @@ section:nth-child(even) {
 .dot--active {
   background: rgba(255, 255, 255, 0.95);
 }
+/* For small/windowed screenshots — show whole image without cropping */
+.screenshot-slide--contain {
+  object-fit: contain;
+  object-position: center;
+  background-color: #f0f0f0;
+}
+
 /* ── end screenshot carousel ── */
 
 .project-card-top {
@@ -1003,6 +1010,7 @@ html[data-theme="dark"] .badge--accepted {
 .projects-grid .project-card:nth-child(3) { transition-delay: 0.16s; }
 .projects-grid .project-card:nth-child(4) { transition-delay: 0.24s; }
 .projects-grid .project-card:nth-child(5) { transition-delay: 0.32s; }
+.projects-grid .project-card:nth-child(6) { transition-delay: 0.40s; }
 
 /* Research cards stagger */
 .research-card:nth-child(1) { transition-delay: 0s; }
