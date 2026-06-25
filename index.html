@@ -284,6 +284,14 @@
             <i class="fas fa-seedling project-icon"></i>
             <h3 class="project-title">Smart Greenhouse — Embedded Control System</h3>
           </div>
+
+          <!-- System architecture diagram from report -->
+          <div class="project-screenshots">
+            <div class="screenshots-track">
+              <img src="assets/images/greenhouse-diagram.png" alt="Greenhouse system block diagram — SAM3X8E inputs and outputs" class="screenshot-slide" loading="lazy" />
+            </div>
+          </div>
+
           <p class="project-description">
             Designed and implemented a microcontroller-based greenhouse automation system
             on a SAM3X8E (ARM Cortex-M3) board. The system reads environmental sensors via ADC,
@@ -311,6 +319,23 @@
             <i class="fas fa-microchip project-icon"></i>
             <h3 class="project-title">RTMK — Real-Time Micro Kernel</h3>
           </div>
+
+          <!-- Kernel architecture flowcharts from report (3 slides) -->
+          <div class="project-screenshots" data-active="0">
+            <div class="screenshots-track">
+              <img src="assets/images/rtmk-ipc.png"      alt="RTMK — IPC synchronous/asynchronous overview"  class="screenshot-slide" loading="lazy" />
+              <img src="assets/images/rtmk-sendwait.png" alt="RTMK — Send-Wait mailbox flowchart"             class="screenshot-slide" loading="lazy" />
+              <img src="assets/images/rtmk-timing.png"   alt="RTMK — Timing functions flowchart"              class="screenshot-slide" loading="lazy" />
+            </div>
+            <button class="screenshot-btn screenshot-prev" aria-label="Previous screenshot">&#8249;</button>
+            <button class="screenshot-btn screenshot-next" aria-label="Next screenshot">&#8250;</button>
+            <div class="screenshot-dots">
+              <span class="dot dot--active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
           <p class="project-description">
             Implemented a real-time operating system kernel from scratch in C as part of
             the Computer System Engineering II course (DT4013). The kernel includes task
@@ -338,6 +363,14 @@
             <i class="fas fa-chart-line project-icon"></i>
             <h3 class="project-title">Stockholm House Price Prediction</h3>
           </div>
+
+          <!-- Feature correlation heatmap from report -->
+          <div class="project-screenshots">
+            <div class="screenshots-track">
+              <img src="assets/images/ml-heatmap.png" alt="Feature correlation heatmap for Stockholm housing dataset" class="screenshot-slide" loading="lazy" />
+            </div>
+          </div>
+
           <p class="project-description">
             Applied supervised machine learning to predict housing prices in Stockholm using
             a Kaggle dataset of 500 real transactions. Implemented and compared three models —

@@ -663,6 +663,7 @@ section:nth-child(even) {
   object-fit: cover;
   object-position: top left;
   display: block;
+  background-color: #ffffff; /* keeps diagram images from looking transparent in dark mode */
 }
 
 .screenshot-btn {
