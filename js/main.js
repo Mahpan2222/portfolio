@@ -257,6 +257,50 @@ sections.forEach((section) => sectionObserver.observe(section));
    - Cards with only one image are skipped (no controls shown).
 ============================================== */
 
+/* ==============================================
+   FEATURE 7: LIGHTBOX
+   ─────────────────────────────────────────────
+   Clicking any .screenshot-slide image opens it
+   full-screen in a dark overlay.
+   Close by: clicking the backdrop, the × button,
+   or pressing Escape.
+============================================== */
+
+const lightbox      = document.getElementById('lightbox');
+const lightboxImg   = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt;
+  lightbox.classList.add('lightbox--open');
+  document.body.style.overflow = 'hidden'; // prevent page scroll while open
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('lightbox--open');
+  document.body.style.overflow = '';
+}
+
+// Open when any screenshot is clicked
+document.querySelectorAll('.screenshot-slide').forEach((img) => {
+  img.addEventListener('click', () => openLightbox(img.src, img.alt));
+});
+
+// Close on backdrop click (but not on the image itself)
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== lightboxImg) closeLightbox();
+});
+
+// Close button
+lightboxClose.addEventListener('click', closeLightbox);
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+
 document.querySelectorAll('.project-screenshots').forEach((gallery) => {
   const track  = gallery.querySelector('.screenshots-track');
   const slides = gallery.querySelectorAll('.screenshot-slide');
